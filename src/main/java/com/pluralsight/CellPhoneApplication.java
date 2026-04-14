@@ -10,15 +10,18 @@ public class CellPhoneApplication {
 
         CellPhone kevCellphone = new CellPhone();
         CellPhone bobbyCellphone = new CellPhone();
+        CellPhone blueJudasCellphone = new CellPhone(666666666, "Hollow Purple", "Suguru Geto", "777-777-777", "Satoru Gojo");
 
         getCellInfo(kevCellphone);
         getCellInfo(bobbyCellphone);
 
         display(kevCellphone);
         display(bobbyCellphone);
+        display(blueJudasCellphone);
 
         kevCellphone.dial(bobbyCellphone.getPhoneNumber());
         bobbyCellphone.dial(kevCellphone.getPhoneNumber());
+        kevCellphone.dial(blueJudasCellphone.getPhoneNumber());
     }
 
     static void display(CellPhone cellPhone){
@@ -50,4 +53,5 @@ public class CellPhoneApplication {
         println("Who is the owner of the phone?");
         phone.setOwnerName(input.nextLine());
     }
+
 }
