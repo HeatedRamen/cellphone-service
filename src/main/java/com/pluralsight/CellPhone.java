@@ -49,4 +49,10 @@ public class CellPhone {
     public void setOwnerName(String ownerName) {
         this.ownerName = ownerName;
     }
+
+    public void dial(String number){
+        System.out.printf("%s's phone is calling %s\n", this.ownerName, number);
+    }
+
 }
+
