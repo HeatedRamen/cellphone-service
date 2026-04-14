@@ -8,22 +8,34 @@ public class CellPhoneApplication {
         Scanner input = new Scanner(System.in);
         CellPhone kevCellphone = new CellPhone();
 
-        System.out.printf("What is the serial number?: ");
+        println("What is the serial number?:");
         kevCellphone.setSerialNumber(input.nextInt());
         input.nextLine();
 
-        System.out.printf("What model is the phone?: ");
+        println("What model is the phone?");
         kevCellphone.setModelName(input.nextLine());
 
-        System.out.printf("Who is the carrier?: ");
+        println("Who is the carrier?");
         kevCellphone.setCellCarrier(input.nextLine());
 
-        System.out.printf("What is the phone number?: ");
+        println("What is the phone number?");
         kevCellphone.setPhoneNumber(input.nextLine());
 
-        System.out.printf("Who is the owner of the phone?: ");
+        println("Who is the owner of the phone?");
         kevCellphone.setOwnerName(input.nextLine());
 
-
+        displayMenu(kevCellphone);
     }
+
+    static void displayMenu(CellPhone cellPhone){
+        println("Serial number: " + cellPhone.getSerialNumber());
+        println("Phone model: " + cellPhone.getModelName());
+        println("Phone carrier: " + cellPhone.getCellCarrier());
+        println("Phone number: " + cellPhone.getPhoneNumber());
+        println("Owner: " + cellPhone.getOwnerName());
+    }
+    static void println(String message){
+        System.out.println(message);
+    }
+
 }
